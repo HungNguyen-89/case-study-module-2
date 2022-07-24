@@ -1,0 +1,195 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    position: relative;
+    top: 2rem;
+    margin: auto;
+    width: 48rem;
+    height: 40rem;
+    display: grid;
+    grid-template-rows: 1.2fr 6fr .8fr .8fr .8fr;
+    grid-template-areas: "header"
+        "image"
+        "suggest"
+        "inputText"
+        "buttonPlay";
+    box-sizing: border-box;
+}
+
+.header {
+    grid-area: header;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    background-color: #001a66;
+    width: 100%;
+    height: 100%;
+
+}
+
+#totalAnswer {
+    padding: .2rem;
+    width: 4rem;
+    height: 3rem;
+    border: solid 1px;
+    margin: .8rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 2.2rem;
+    color: white;
+    font-weight: bolder;
+
+}
+
+#notification{
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: white;
+}
+
+#timeClock {
+    width: 10rem;
+    height: 3rem;
+    margin: .8rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: bolder;
+}
+
+
+#image-background {
+    grid-area: image;
+    background-color: lightcyan;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border: solid 1px;
+    box-sizing: border-box;
+
+}
+
+#image-background img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#suggest {
+    grid-area: suggest;
+    background-color: #001a66;
+    display: flex;
+    justify-content: center;
+    width:100%;
+    height: 100%;
+}
+
+.txtNumber {
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    width: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    box-sizing: border-box;
+}
+
+#inputText {
+    grid-area: inputText;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+#txt {
+    width: 30rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: .5rem;
+    text-align: center;
+}
+
+#buttonPlayContainer {
+    grid-area: buttonPlay;
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+}
+
+.buttonPlay {
+    background-color: orange;
+    color: black;
+    border: none;
+    padding: .2rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 8rem;
+    height: 3rem;
+    transition-duration: 0.4s;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.buttonPlay:hover {
+    background-color: green;
+    color: white;
+}
+
+.buttonPlay2 {
+    background-color: #262626;
+    color: white;
+    border: none;
+    padding: .2rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: not-allowed;
+    width: 8rem;
+    height: 3rem;
+    transition-duration: 0.4s;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+
+#hiddenNumber {
+   display: none;
+}
+
+@media (max-width:768px) {
+    .container {
+        width: 100%;
+        height: 35rem;
+    }
+  }
+
+  @media (max-width:576px) {
+    #txt {
+        width: 25rem;
+    }
+    .txtNumber {
+        padding: 2px;
+        margin: 2px;
+        width: 1.5rem;
+        font-size: .8rem;
+    }
+  }
+
+
